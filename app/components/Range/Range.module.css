@@ -1,0 +1,51 @@
+/* Range.module.css */
+.sliderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%; /* Set the width of the slider container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.value {
+  width: 15%; /* Set the width of value1 and value2 to 15% of the total container width */
+  text-align: center; /* Optional: center text inside the div */
+}
+
+.slider {
+  width: 70%; /* Set the width of the slider to 70% of the container */
+  position: relative;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.track {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #bbb;
+  border-radius: 5px;
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #ff5722;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab; /* Default cursor */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thumb:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumb.grabbing {
+  cursor: grabbing; /* Cursor changes when dragging */
+}
